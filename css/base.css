@@ -17475,6 +17475,7 @@ html {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  transition: transform 1s ease-in;
   --position: 0px;
 }
 .featuredblog__container {
@@ -17486,7 +17487,7 @@ html {
 @media only screen and (max-width: 37.5em) {
   .featuredblog__container {
     align-self: flex-start;
-    transform: translateX(var(--position));
+    transform: translateX(calc(1px * var(--position)));
   }
 }
 

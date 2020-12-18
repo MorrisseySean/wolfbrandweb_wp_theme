@@ -210,6 +210,8 @@
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  
+  transition: transform 1s ease-in;
   --position: 0px;
 
   &__container {
@@ -221,7 +223,7 @@
     
     @include respond(phone) {
       align-self: flex-start;
-      transform: translateX(var(--position));
+      transform: translateX(calc(1px * var(--position)));
     }
   }
 }
