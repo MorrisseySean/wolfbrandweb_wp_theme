@@ -1,0 +1,64 @@
+.blogcard {
+    height: 50rem;
+    width: 100%;    
+    border-radius: 2rem;    
+    overflow: hidden;
+    background-color: $color-primary;
+    position: relative;
+    
+    &--more {
+        background-color: $color-background;             
+    }
+
+    &:not(:last-of-type) {
+        margin-right: 2rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        
+        &--more {
+            justify-content: center;
+            align-items: center;
+            &:hover > .blogcard__icon {
+                animation: bounce-right 0.6s ease-in;
+                animation-fill-mode: forwards;
+            }   
+        }
+
+        & > img {
+            position: absolute;
+            left: -50%;
+            object-fit: cover;
+            height: 100%;  
+            z-index: 1;
+
+            &:hover {
+                transform: scale(1.05);
+                transition: 0.3s all linear;
+            }
+        }
+    }    
+
+    &__title {        
+        background-color: rgba($color-primary, 0.6);    
+        width: 100%;
+        color: $color-white;
+        font-size: 2.8rem;
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+        padding-left: 5rem;
+        align-self: flex-end;
+        text-align: left;
+        z-index: 2;
+    }
+
+    &__icon {
+        font-size: 10rem;
+        color: $color-primary;
+        animation: bounce-right-back 0.6s ease-out;
+    }
+}

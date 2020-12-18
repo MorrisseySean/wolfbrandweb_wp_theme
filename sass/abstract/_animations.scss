@@ -1,0 +1,11 @@
+@keyframes bounce-right {
+    0%   { transform: scale(1,1) translateX(0); }
+    40%  { transform: scale(0.8,1.1) translateX(-2rem); }
+    100% { transform: scale(1,1) translateX(250%); }
+}
+
+@keyframes bounce-right-back {
+    0%   { transform: scale(1,1) translateX(-250%); }
+    60%  { transform: scale(0.8,1.1) translateX(2rem); }
+    100% { transform: scale(1,1) translateX(0); }
+}
